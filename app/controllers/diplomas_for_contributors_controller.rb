@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'zip'
-
 class DiplomasForContributorsController < ApplicationController
   def index
   end
