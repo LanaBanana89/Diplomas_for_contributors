@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DiplomasForContributors</title>
+  </head>
+  <body>
+    <form action=<%= diplomas_for_contributors_search_contributors_path%> method="GET">
+      <div class="block-top">
+        <%= search_field(:search_params, :link, placeholder: "https://github.com/rails/rails", class: "input") %>        
+        <%= content_tag(:button, "search", :type=>:submit, class: 'btn-lg btn-outline-primary button-left media-button')%>
+      </div> 
+      <h1 class="result">Results</h1>
+      <table class="table">
+        <tr>
+          <% if @contributor_names[0] %> 
+            <td><%= @contributor_names[0] %></td>
+            <td><%= link_to "download.pdf", generate_pdf_url(number: 1, name: @contributor_names[0]), html_options = {:method => :get} %></td>   
+          <% end %>
+        </tr>
+        <tr>
+          <% if @contributor_names[1] %> 
+            <td><%= @contributor_names[1] %></td>
+            <td><%= link_to "download.pdf", generate_pdf_url(number: 2, name: @contributor_names[1]), html_options = {:method => :get} %></td>
+          <% end %>
+        </tr>
+        <tr>
+          <% if @contributor_names[2] %> 
+            <td><%= @contributor_names[2] %></td>
+            <td><%= link_to "download.pdf", generate_pdf_url(number: 3, name: @contributor_names[2]), html_options = {:method => :get} %></td>   
+          <% end %>
+        </tr>
+      </table>
+      <div class="zip">
+        <%= link_to "download zip(#{ @contributor_names.count})", generate_zip_archive_url(contributor_names: @contributor_names), html_options = {:method => :get} %>
+      </div>
+    </form>
+  </body>
+</html>
+
+<script>  
+  if($(window).width() <= 1024){
+      $('.media-button').removeClass('button-left');
+  };
+
+  if($(window).width() >= 1024){
+      $('.media-button').addClass('button-left');
+  };
+
+  $(window).resize(function () {
+    if($(window).width() <= 1024){
+      $('.media-button').removeClass('button-left');
+    };
+  })
+  
+  $(window).resize(function () {
+    if($(window).width() >= 1024){
+        $('.media-button').addClass('button-left');
+    };
+  })
+</script>

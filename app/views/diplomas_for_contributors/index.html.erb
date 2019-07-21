@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DiplomasForContributors</title>
+  </head>
+  <body>
+    <form action=<%= diplomas_for_contributors_search_contributors_path%> method="GET">
+      <div class="block">
+        <div class="center"> 
+          <div class="margin">
+            <%= search_field(:search_params, :link, placeholder: "https://github.com/rails/rails", class: "input") %>          
+          </div>
+          <div class="button-container">  
+            <%= content_tag(:button, "search", :type=>:submit, class: 'btn-lg btn-outline-primary button-center')%>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

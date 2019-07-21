@@ -1,0 +1,22 @@
+db/schema.rb
+public/tmp_images/*
+public/system
+public/assets
+public/images/*
+!public/images/tutorial/*
+!public/images/browsers/*
+public/models
+!public/tmp_images/.gitkeep
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp
+/.idea
+/config/database.yml
+/config/secrets.yml

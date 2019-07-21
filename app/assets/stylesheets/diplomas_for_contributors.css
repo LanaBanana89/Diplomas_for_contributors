@@ -1,0 +1,122 @@
+.block  {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;  
+}
+
+.center {
+  width: 700px;
+  height: 50px;     
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;    
+}
+
+.input {
+  width: 700px;
+  height: 50px;
+  text-align: center;
+  border: 2px solid black;
+  font-size: 2em;
+  border-radius: 5px;
+}
+
+.button-container {
+  width: 700px;
+  height: 50px;
+  text-align: center;   
+}
+
+.button-center {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.block-top {
+  margin: 20px;  
+  position:relative;
+}
+
+.button-left {
+  display: inline-block;
+  margin-left: 20px;
+  top: 0;
+  position:absolute;
+}
+
+.result {  
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.table {
+  margin-left: 20px;
+  margin-right: 20px;  
+  margin-top: 40px;
+  width: 600px;
+}
+
+.content_pdf {
+  text-align: center;
+}
+
+.wrong_link {  
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.return_button {
+  border: 2px solid #2C5BE2;
+  border-radius: 5px;
+  padding: 10px;  
+  color: #2C5BE2;
+  background-color: #E9F1F1;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.return_button:hover {
+  background-color: #2C5BE2;
+  text-decoration: none;
+  color: white;
+}
+
+.margin {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.zip {  
+  margin-left: 30px;
+}
+
+
+@media only screen and (max-width : 992px) {
+  .input{width: 100%; font-size: 20px;}
+  .center{width: 100%;}
+  .button-container{width: 100%;}
+  .media-button{margin-top: 10px;}
+  .table{width: 100%; margin-right: 20px;}
+}
+
+@media only screen and (max-width : 480px) {
+  .input{width: 100%; font-size: 20px;}
+  .center{width: 100%;}
+  .button-container{width: 100%;}
+  .media-button{margin-top: 10px;}
+  .table{width: 100%;}  
+}
+
+@media only screen and (max-width : 768px) {
+  .input{width: 100%; font-size: 20px;}
+  .center{width: 100%;}
+  .button-container{width: 100%;}
+  .media-button{margin-top: 10px; margin-left: auto; margin-right: auto;}
+  .table{width: 100%;}
+} 
